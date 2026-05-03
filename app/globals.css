@@ -57,11 +57,19 @@ main {
   line-height: 1.15;
 }
 
-.hero-logo {
-  width: clamp(70px, 20vw, 90px);
-  margin-bottom: 0.55rem;
-  display: block;
-  filter: drop-shadow(0 0 5px rgba(123, 255, 158, 0.28));
+.aspire-logo-wrap {
+  margin-bottom: 20px;
+}
+
+.aspire-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow:
+    0 0 20px rgba(255, 0, 200, 0.5),
+    0 0 40px rgba(255, 0, 200, 0.4),
+    0 0 60px rgba(255, 0, 200, 0.3);
 }
 
 .subheadline {
@@ -185,10 +193,6 @@ h2 {
 }
 
 @media (min-width: 920px) {
-  .hero-logo {
-    width: clamp(90px, 9vw, 130px);
-  }
-
   .hero {
     grid-template-columns: 1.1fr 0.9fr;
     gap: 2.2rem;
@@ -196,5 +200,12 @@ h2 {
 
   .hero-image-wrap {
     order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .aspire-logo {
+    width: 90px;
+    height: 90px;
   }
 }

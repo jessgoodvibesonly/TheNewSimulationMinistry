@@ -31,7 +31,9 @@ export default function HomePage() {
     <main>
       <section className="hero section">
         <div className="hero-content">
-          <img src="/ASPIREaiMOTHERSHIP.png" alt="ASPIREai logo" className="hero-logo" />
+          <div className="aspire-logo-wrap">
+            <img src="/ASPIREaiMOTHERSHIP.png" alt="ASPIREai logo" className="aspire-logo" />
+          </div>
           <h1>ASPIREai IS THE MOTHERSHIP FOR MODERN COMPANIES</h1>
           <p className="subheadline">
             Helping people and technology work together to build better businesses.
