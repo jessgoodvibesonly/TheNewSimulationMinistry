@@ -1,29 +1,54 @@
-const helpCards = [
-  "Organizing workflows",
-  "Saving time",
-  "Improving communication",
-  "Supporting teams",
-  "Simplifying operations",
-  "Helping decision-making"
+const painPoints = ["Too many tools", "Not enough time", "No clear implementation plan"];
+
+const buildOptions = [
+  "AI workflow automations",
+  "Internal knowledge assistants",
+  "Customer support systems",
+  "Content and communication systems",
+  "Recruiting and hiring support",
+  "Operations documentation",
+  "Team AI training",
+  "Leadership decision support"
 ];
 
-const audience = [
-  "Businesses",
-  "Founders",
-  "Teams",
+const audiences = [
+  "Service businesses",
   "Agencies",
   "Studios",
   "Nonprofits",
-  "Educators"
+  "Schools and training organizations",
+  "Founders and small teams",
+  "Growing companies",
+  "People-first organizations"
 ];
 
-const functions = [
-  "Operations",
-  "Marketing",
-  "Sales",
-  "Hiring",
-  "Customer support",
-  "Internal systems"
+const processSteps = [
+  "Book your audit",
+  "Map your workflows",
+  "Find your AI opportunities",
+  "Build what matters first"
+];
+
+const pricing = [
+  {
+    title: "AI Readiness & Workflow Audit",
+    price: "$199",
+    description: "Best for companies that want clarity before building.",
+    cta: "Book Your Audit"
+  },
+  {
+    title: "AI Implementation Sprint",
+    price: "Starting at $750",
+    description: "Best for companies ready to build one practical AI workflow or automation.",
+    cta: "Request a Sprint"
+  },
+  {
+    title: "Monthly ASPIREai Support",
+    price: "Starting at $1,500/month",
+    description:
+      "Best for teams that want ongoing AI strategy, automation, content, operations, and support.",
+    cta: "Explore Monthly Support"
+  }
 ];
 
 export default function HomePage() {
@@ -38,14 +63,15 @@ export default function HomePage() {
           <p className="subheadline">
             Helping people and technology work together to build better businesses.
           </p>
-          <p>
-            ASPIREai is a human-led, AI-powered system that helps companies simplify their
-            work, support their teams, and move forward with clarity.
-          </p>
-          <p>
-            This is not about replacing people. This is about helping people do their best
-            work.
-          </p>
+          <div className="actions hero-actions">
+            <a href="#" className="btn primary">
+              Book Your AI Audit
+            </a>
+            <a href="#" className="btn secondary">
+              See What We Can Build
+            </a>
+          </div>
+          <p className="trust-line">Human-led. AI-powered. Built for real teams.</p>
         </div>
         <div className="hero-image-wrap">
           <div className="hero-glow" aria-hidden="true" />
@@ -55,83 +81,119 @@ export default function HomePage() {
       </section>
 
       <section className="section glass">
-        <h2>A Better Way to Work with AI</h2>
+        <h2>AI should make work feel lighter, not more overwhelming.</h2>
         <p>
-          AI should make work feel lighter, not heavier. ASPIREai helps your team remove
-          friction, reduce overwhelm, and focus on what matters most. You stay in control,
-          while AI supports the flow of your business in the background.
+          Most companies know they should be using AI, but they are not sure where to start, what
+          tools to trust, or how to bring AI into the business without confusing their team.
         </p>
+        <p>ASPIREai helps companies turn AI confusion into clear, practical systems.</p>
+        <div className="grid cards">
+          {painPoints.map((point) => (
+            <article className="glass card" key={point}>
+              <h3>{point}</h3>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="section">
-        <h2>What ASPIREai Helps With</h2>
+        <h2>Start with a simple AI Readiness &amp; Workflow Audit</h2>
+        <p>
+          We look at how your company works today and identify where AI can save time, reduce
+          friction, support your team, and create immediate value.
+        </p>
+        <article className="glass offer-card">
+          <h3>AI Readiness &amp; Workflow Audit</h3>
+          <ul>
+            <li>45 minute strategy call</li>
+            <li>Review of current workflows</li>
+            <li>Identify 3 to 5 AI opportunities</li>
+            <li>Simple implementation roadmap</li>
+            <li>Practical recommendations your team can understand</li>
+            <li>Optional Loom recap</li>
+          </ul>
+          <p className="price">Introductory price: $199</p>
+          <a href="#" className="btn primary">
+            Book Your Audit
+          </a>
+          <p className="note">Limited early-client pricing for testimonials and case studies.</p>
+        </article>
+      </section>
+
+      <section className="section glass">
+        <h2>From audit to implementation</h2>
+        <p>
+          After the audit, companies can choose to have ASPIREai build the systems, workflows, and
+          tools recommended in the roadmap.
+        </p>
         <div className="grid cards">
-          {helpCards.map((card) => (
-            <article className="glass card" key={card}>
-              <h3>{card}</h3>
-              <p>
-                Thoughtful AI assistance that keeps your people confident, aligned, and moving
-                forward.
-              </p>
+          {buildOptions.map((item) => (
+            <article className="card glass" key={item}>
+              <h3>{item}</h3>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section human-first glass">
+        <h2>AI works best when people feel supported.</h2>
+        <p>
+          ASPIREai is built around one belief: people matter.
+        </p>
+        <p>
+          We help companies use AI in a way that gives teams more clarity, more confidence, and
+          more time to do meaningful work.
+        </p>
+        <blockquote className="quote-card">AI is the tool. People are the creators.</blockquote>
+      </section>
+
+      <section className="section">
+        <h2>Built for companies that want to move forward with clarity.</h2>
+        <div className="grid cards">
+          {audiences.map((item) => (
+            <article className="glass card" key={item}>
+              <h3>{item}</h3>
             </article>
           ))}
         </div>
       </section>
 
       <section className="section glass">
-        <h2>Who This Is For</h2>
-        <ul className="pill-list">
-          {audience.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="section">
-        <h2>The Mothership Model</h2>
-        <p>
-          ASPIREai acts as your central intelligence layer, connecting people, systems, and
-          priorities across the company. It brings calm coordination to every area of your
-          business.
-        </p>
-        <div className="grid function-grid">
-          {functions.map((item) => (
-            <div className="glass function-item" key={item}>
-              {item}
-            </div>
+        <h2>How it works</h2>
+        <div className="grid process-grid">
+          {processSteps.map((step, idx) => (
+            <article key={step} className="card step-card">
+              <p className="step-number">{idx + 1}</p>
+              <h3>{step}</h3>
+            </article>
           ))}
         </div>
       </section>
 
-      <section className="section glass human-first">
-        <h2>Human First</h2>
-        <p className="lead">People matter. AI is a tool. People are the creators.</p>
-        <p>
-          ASPIREai is designed to protect what makes your company special: your people. Their
-          ideas, intuition, and care are the center of every decision. AI simply helps unlock
-          more of their potential.
-        </p>
-      </section>
-
-      <section className="section">
-        <h2>Why This Matters Now</h2>
-        <p>
-          AI is moving quickly. Companies do not need more noise or confusion. They need a clear,
-          supportive way to adopt AI with confidence. ASPIREai helps you move at the right pace,
-          with clarity every step of the way.
-        </p>
-      </section>
-
-      <section className="section cta glass">
-        <h2>Ready to bring AI into your company in a way that feels right?</h2>
-        <div className="actions">
-          <a href="#" className="btn primary">
-            Book a Call
-          </a>
-          <a href="#" className="btn">
-            Learn More
-          </a>
+      <section className="section pricing-section">
+        <h2>Simple starting point. Clear next steps.</h2>
+        <div className="grid pricing-grid">
+          {pricing.map((plan) => (
+            <article key={plan.title} className="glass price-card">
+              <h3>{plan.title}</h3>
+              <p className="price-tag">{plan.price}</p>
+              <p>{plan.description}</p>
+              <a href="#" className="btn primary">
+                {plan.cta}
+              </a>
+            </article>
+          ))}
         </div>
+      </section>
+
+      <section className="section cta glass final-cta">
+        <h2>Ready to bring AI into your company without overwhelm?</h2>
+        <p>
+          Start with one clear audit. Leave with a practical roadmap your team can actually use.
+        </p>
+        <a href="#" className="btn primary">
+          Book Your AI Audit
+        </a>
       </section>
 
       <footer className="footer">
