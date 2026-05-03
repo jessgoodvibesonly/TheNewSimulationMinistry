@@ -57,12 +57,11 @@ main {
   line-height: 1.15;
 }
 
-.eyebrow {
-  color: var(--accent);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 0;
+.hero-logo {
+  width: clamp(70px, 20vw, 90px);
+  margin-bottom: 0.55rem;
+  display: block;
+  filter: drop-shadow(0 0 5px rgba(123, 255, 158, 0.28));
 }
 
 .subheadline {
@@ -186,6 +185,10 @@ h2 {
 }
 
 @media (min-width: 920px) {
+  .hero-logo {
+    width: clamp(90px, 9vw, 130px);
+  }
+
   .hero {
     grid-template-columns: 1.1fr 0.9fr;
     gap: 2.2rem;
