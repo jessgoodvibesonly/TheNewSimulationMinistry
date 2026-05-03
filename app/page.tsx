@@ -31,7 +31,7 @@ export default function HomePage() {
     <main>
       <section className="hero section">
         <div className="hero-content">
-          <p className="eyebrow">ASPIREai</p>
+          <img src="/ASPIREaiMOTHERSHIP.png" alt="ASPIREai logo" className="hero-logo" />
           <h1>ASPIREai IS THE MOTHERSHIP FOR MODERN COMPANIES</h1>
           <p className="subheadline">
             Helping people and technology work together to build better businesses.
