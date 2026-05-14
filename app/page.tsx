@@ -1,51 +1,45 @@
-const audience = [
-  "Business owners & entrepreneurs",
-  "CEOs, founders & executive teams",
-  "Consultants, coaches & agencies",
-  "Marketing, operations & sales leaders",
-  "Creators & educators building digital brands",
-  "Teams preparing for AI-enabled workflows"
+import Image from "next/image";
+
+const weeklyCurriculum = [
+  "AI Foundations for Business",
+  "AI Content Systems",
+  "AI Marketing & Sales",
+  "AI Automation & Operations",
+  "AI Team Productivity",
+  "Building Your AI Business Stack"
 ];
 
-const tracks = [
+const outcomes = [
+  "Save time",
+  "Increase output",
+  "Reduce overwhelm",
+  "Improve workflows",
+  "Build modern systems",
+  "Lead confidently into the AI era"
+];
+
+const pricingPlans = [
   {
-    title: "Executive AI Strategy",
-    text: "Turn AI from a trend into a practical growth plan with clear priorities and measurable outcomes.",
-    badge: "Leadership"
+    name: "Starter",
+    price: "$497",
+    detail: "For solo founders and first-time AI operators"
   },
   {
-    title: "Operations Automation",
-    text: "Design repeatable systems that remove bottlenecks, reduce manual tasks, and increase team velocity.",
-    badge: "Systems"
+    name: "Operator",
+    price: "$1,497",
+    detail: "For owners and leaders implementing across the business"
   },
   {
-    title: "Content & Brand Intelligence",
-    text: "Use AI to ideate, draft, and repurpose content while protecting your brand voice and standards.",
-    badge: "Marketing"
-  },
-  {
-    title: "Customer Experience AI",
-    text: "Deploy AI support workflows that improve response time, personalization, and retention.",
-    badge: "CX"
+    name: "Executive Team",
+    price: "Custom",
+    detail: "For leadership teams rolling out AI at scale"
   }
 ];
 
-const learningOutcomes = [
-  "Choose the right AI tools for your exact business model",
-  "Create high-quality prompts, workflows, and SOPs your team can actually use",
-  "Save hours each week across operations, communication, and content",
-  "Build responsible AI policies that protect trust and brand integrity",
-  "Lead confident AI adoption without overwhelming your people",
-  "Measure business impact with practical KPIs and implementation plans"
-];
-
-const formats = ["Live cohort intensives", "Private leadership workshops", "Team implementation labs", "On-demand micro lessons + toolkits"];
-
-const differentiators = [
-  "Human-first AI education grounded in real business operations",
-  "Built for decision-makers, not just technical teams",
-  "Strategic and practical: vision, systems, and execution",
-  "Premium academy experience with implementation support"
+const stats = [
+  { value: "2,000+", label: "Business Leaders Reached" },
+  { value: "85+", label: "Countries" },
+  { value: "4.9/5", label: "Average Experience Rating" }
 ];
 
 export default function HomePage() {
@@ -55,88 +49,93 @@ export default function HomePage() {
       <div className="orb orb-two" aria-hidden="true" />
       <div className="orb orb-three" aria-hidden="true" />
 
-      <section className="hero">
-        <span className="badge">Premium AI Academy</span>
-        <h1>Aspire AI Academy</h1>
-        <p className="subheadline">
-          AI training for business owners, entrepreneurs, CEOs, and future-ready teams.
-        </p>
+      <section className="hero glass-shell">
+        <div className="hero-logo-wrap">
+          <div className="hero-logo-glow" aria-hidden="true" />
+          <Image
+            src="/ASPIREai.png"
+            alt="Aspire AI Academy logo"
+            width={96}
+            height={96}
+            className="hero-logo"
+            priority
+          />
+        </div>
+
+        <span className="badge">Aspire AI Academy</span>
+        <h1>Premium AI Education for Modern Business Leaders</h1>
+        <p className="subheadline">Human Intelligence. AI Amplified.</p>
         <p className="hero-body">
-          Learn how to use AI to save time, streamline operations, create content, improve customer
-          experience, support your team, and grow your business without losing the human touch.
+          We help entrepreneurs, CEOs, and teams build practical AI systems that elevate execution,
+          decision-making, and long-term competitive advantage.
         </p>
         <div className="hero-actions">
-          <a href="#" className="btn btn-primary">Apply for the Academy</a>
-          <a href="#tracks" className="btn btn-ghost">Explore Tracks</a>
+          <a href="#pricing" className="btn btn-primary">Apply Now</a>
+          <a href="#flagship-course" className="btn btn-ghost">View Flagship Course</a>
         </div>
       </section>
 
-      <section className="panel">
-        <h2>AI is no longer optional</h2>
-        <p>
-          The companies that lead the next decade will be the ones that train their people to use
-          AI with strategy, speed, and responsibility. Aspire AI Academy helps you move from
-          curiosity to confident execution.
+      <section className="section glass-shell" id="flagship-course">
+        <span className="mini-badge">Flagship Program</span>
+        <h2>AI Operator™</h2>
+        <p className="section-subtitle">A 6-Week AI Business Accelerator for Entrepreneurs, CEOs & Teams</p>
+        <p className="section-copy">
+          Learn how to use AI to save 10+ hours per week, create content faster, automate repetitive
+          tasks, improve marketing, streamline operations, build AI systems into your business, and
+          stay competitive in the AI era.
         </p>
       </section>
 
-      <section className="section">
-        <h2>Who it&apos;s for</h2>
-        <div className="grid">
-          {audience.map((item) => (
-            <article className="glass" key={item}>{item}</article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section" id="tracks">
-        <h2>Academy tracks</h2>
-        <div className="grid tracks-grid">
-          {tracks.map((track) => (
-            <article className="track-card" key={track.title}>
-              <span className="mini-badge">{track.badge}</span>
-              <h3>{track.title}</h3>
-              <p>{track.text}</p>
+      <section className="section glass-shell" id="learn">
+        <h2>What You&apos;ll Learn</h2>
+        <div className="grid learn-grid">
+          {weeklyCurriculum.map((week, index) => (
+            <article className="learn-card" key={week}>
+              <p className="week-label">Week {index + 1}</p>
+              <h3>{week}</h3>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="section">
-        <h2>What students will learn</h2>
-        <div className="grid">
-          {learningOutcomes.map((item) => (
-            <article className="glass" key={item}>{item}</article>
+      <section className="section glass-shell" id="outcomes">
+        <h2>Outcomes</h2>
+        <div className="grid outcome-grid">
+          {outcomes.map((outcome) => (
+            <article className="outcome-card" key={outcome}>{outcome}</article>
           ))}
         </div>
       </section>
 
-      <section className="section panel">
-        <h2>Why Aspire AI Academy is different</h2>
-        <div className="stack">
-          {differentiators.map((item) => (
-            <p key={item}>✦ {item}</p>
+      <section className="section glass-shell" id="social-proof">
+        <h2>Trusted Across the Global Business Community</h2>
+        <div className="grid stat-grid">
+          {stats.map((stat) => (
+            <article className="stat-card" key={stat.label}>
+              <p className="stat-value">{stat.value}</p>
+              <p className="stat-label">{stat.label}</p>
+            </article>
           ))}
         </div>
       </section>
 
-      <section className="section">
-        <h2>Program formats</h2>
-        <div className="grid formats-grid">
-          {formats.map((item) => (
-            <article className="format-card" key={item}>{item}</article>
+      <section className="section glass-shell" id="pricing">
+        <h2>Pricing</h2>
+        <div className="grid pricing-grid">
+          {pricingPlans.map((plan) => (
+            <article className="price-card" key={plan.name}>
+              <h3>{plan.name}</h3>
+              <p className="price">{plan.price}</p>
+              <p>{plan.detail}</p>
+            </article>
           ))}
         </div>
       </section>
 
-      <section className="final-cta">
-        <h2>Build an AI-ready company without losing your human edge.</h2>
-        <p>
-          Aspire AI Academy gives leaders and teams the training, systems, and confidence to adopt
-          AI in a practical, strategic, and people-centered way.
-        </p>
-        <a href="#" className="btn btn-primary">Join Aspire AI Academy</a>
-      </section>
+      <footer className="footer glass-shell">
+        <p className="brand">Aspire AI Academy</p>
+        <p>Human Intelligence. AI Amplified.</p>
+      </footer>
     </main>
   );
 }
