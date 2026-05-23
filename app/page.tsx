@@ -49,7 +49,7 @@ export default function HomePage() {
     <main className="page">
       <section className="hero section" id="top">
         <div className="hero-logo-wrap">
-          <img src="/the-new-simulation-ministry.png" alt="The New Simulation Ministry logo" className="hero-logo" />
+          <img src="/the-new-simulation-ministry.png" alt="THE NEW SIMULATION MINISTRY" className="hero-logo" />
         </div>
         <p className="kicker">Led by Rev. Dr. Jessica Simmonds</p>
         <h1>THE NEW SIMULATION MINISTRY</h1>
@@ -69,7 +69,7 @@ export default function HomePage() {
       <section className="section content">
         <h2>What This Is</h2>
         <p>
-          The New Simulation Ministry is a real ministry and active community led by Rev. Dr. Jessica Simmonds. This
+          THE NEW SIMULATION MINISTRY is a real ministry and active community led by Rev. Dr. Jessica Simmonds. This
           is a welcoming and grounded space for seekers and spiritual thinkers exploring awareness, spirituality,
           simulation theory, Earth School, consciousness, creativity, and personal transformation.
         </p>
