@@ -62,7 +62,6 @@ export default function HomePage() {
           A school of awareness and sacred conversation where consciousness, perception, creativity, love, and choice
           help shape how we live this human chapter.
         </p>
-        <a href="#join" className="button">Join the Conversation</a>
       </section>
 
       <section className="section content">
