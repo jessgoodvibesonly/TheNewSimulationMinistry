@@ -54,6 +54,8 @@ export default function HomePage() {
         <p className="kicker">Led by Rev. Dr. Jessica Simmonds</p>
         <h1>THE NEW SIMULATION MINISTRY</h1>
         <p className="lead">A real spiritual community for people exploring life as a temporary human experience.</p>
+        <p className="support">Bringing Back the 80’s Movement</p>
+        <a href="https://jessgoodvibesonly.vercel.app" className="inline-link" {...externalLinkProps}>Visit JessGoodVibesOnly</a>
         <blockquote className="hero-quote">
           <p>“Can you see your own face right now?”</p>
           <cite>— Rev. Dr. Jessica Simmonds</cite>
