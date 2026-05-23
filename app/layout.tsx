@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "The New Simulation Ministry",
+  title: "THE NEW SIMULATION MINISTRY",
   description:
     "A sacred, modern spiritual community exploring awareness, love, creativity, and conscious living."
 };
