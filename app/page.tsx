@@ -142,7 +142,11 @@ export default function HomePage() {
         <ul className="contact-list">
           {connectedProjects.map((project) => (
             <li key={project.name}>
-              <span>{project.name}</span>
+              {project.href ? (
+                <a href={project.href} {...externalLinkProps}>{project.name}</a>
+              ) : (
+                <span>{project.name}</span>
+              )}
               {project.href ? (
                 <a href={project.href} {...externalLinkProps}>Visit</a>
               ) : (

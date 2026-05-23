@@ -102,8 +102,9 @@ h1 { margin: .65rem 0 .4rem; font-size: clamp(2rem, 6vw, 4.75rem); line-height: 
   padding-bottom: .5rem;
 }
 .contact-list span { color: rgba(255,255,255,.66); }
-.contact-list a { text-decoration: none; color: rgba(255,255,255,.95); }
-.contact-list a:hover { opacity: .78; }
+.contact-list li > * { min-width: 0; }
+.contact-list a { text-decoration: none; color: rgba(255,255,255,.95); cursor: pointer; overflow-wrap: anywhere; }
+.contact-list a:hover { opacity: .78; text-decoration: underline; }
 .podcast-placeholder { color: rgba(255,255,255,.7); font-style: italic; }
 
 .form { display: grid; gap: .8rem; margin-top: .8rem; }
