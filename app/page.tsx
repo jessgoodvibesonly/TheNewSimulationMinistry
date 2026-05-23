@@ -32,14 +32,14 @@ const gatheringItems = [
 
 const connectedProjects = [
   { name: "EARTH SCHOOL Podcast", href: "https://www.youtube.com/@EarthSchoolThePodcast" },
-  { name: "A Spiritual Warrior’s Path to Re-Enlightening", href: "ADD_BOOK_LINK_HERE" }
+  { name: "A Spiritual Warrior’s Path to Re-Enlightening", href: "https://www.amazon.com/Spiritual-Warriors-Path-Re-Enlightening-ebook/dp/B0BR66M6TJ" }
 ];
 
 const socialContacts = [
   { label: "LinkedIn", text: "Jessica Simmonds on LinkedIn", href: "https://www.linkedin.com/in/jessica-simmonds-aspire4/" },
   { label: "Instagram", text: "A Spiritual Warrior’s Path on Instagram", href: "https://www.instagram.com/aspiritualwarriorspath" },
   { label: "Personal Site", text: "jessgoodvibesonly", href: "https://jessgoodvibesonly.vercel.app" },
-  { label: "Email", text: "jessgoodvibesonly@gmail.com", href: "mailto:jessgoodvibesonly@gmail.com", isMailto: true }
+  { label: "Email", text: "jessgoodvibesonly@gmail.com", href: "mailto:jessgoodvibesonly@gmail.com" }
 ];
 
 const externalLinkProps = { target: "_blank", rel: "noopener noreferrer" };
@@ -160,7 +160,7 @@ export default function HomePage() {
           {socialContacts.map((item) => (
             <li key={item.text}>
               <span>{item.label}</span>
-              <a href={item.href} {...(item.isMailto ? {} : externalLinkProps)}>{item.text}</a>
+              <a href={item.href} {...externalLinkProps}>{item.text}</a>
             </li>
           ))}
         </ul>
