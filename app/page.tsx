@@ -45,21 +45,6 @@ const socialContacts = [
 const externalLinkProps = { target: "_blank", rel: "noopener noreferrer" };
 
 export default function HomePage() {
-  const handleJoin = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-    const name = String(formData.get("name") ?? "").trim();
-    const email = String(formData.get("email") ?? "").trim();
-    const message = String(formData.get("message") ?? "").trim();
-
-    const subject = encodeURIComponent("The New Simulation Ministry Inquiry");
-    const body = encodeURIComponent(`Name: ${name || "N/A"}\nEmail: ${email || "N/A"}\n\nMessage:\n${message || "N/A"}`);
-
-    window.location.href = `mailto:jessgoodvibesonly@gmail.com?subject=${subject}&body=${body}`;
-  };
-
   return (
     <main className="page">
       <section className="hero section" id="top">
@@ -69,6 +54,10 @@ export default function HomePage() {
         <p className="kicker">Led by Rev. Dr. Jessica Simmonds</p>
         <h1>THE NEW SIMULATION MINISTRY</h1>
         <p className="lead">A real spiritual community for people exploring life as a temporary human experience.</p>
+        <blockquote className="hero-quote">
+          <p>“Can you see your own face right now?”</p>
+          <cite>— Rev. Dr. Jessica Simmonds</cite>
+        </blockquote>
         <p className="support">
           A school of awareness and sacred conversation where consciousness, perception, creativity, love, and choice
           help shape how we live this human chapter.
@@ -134,12 +123,14 @@ export default function HomePage() {
           This ministry is for seekers, creators, spiritual thinkers, curious minds, and anyone who has ever felt that
           life is more than it appears to be.
         </p>
-        <form className="form" onSubmit={handleJoin}>
-          <label>Name<input type="text" name="name" placeholder="Your name" required /></label>
-          <label>Email<input type="email" name="email" placeholder="you@example.com" required /></label>
-          <label>Message<textarea name="message" rows={5} placeholder="Share what brought you here..." required /></label>
-          <button type="submit" className="button">Send Inquiry</button>
-        </form>
+        <a
+          href="https://forms.gle/X8zBMWuxZBCuB7L8A"
+          className="button join-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Join the Conversation
+        </a>
       </section>
 
       <section className="section content">
