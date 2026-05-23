@@ -31,10 +31,15 @@ const gatheringItems = [
 ];
 
 const connectedProjects = [
-  { name: "EARTH SCHOOL: A Temporary Human Experience", href: "https://jessgoodvibesonly.vercel.app" },
-  { name: "The EARTH SCHOOL Podcast", href: "" },
-  { name: "A Spiritual Warrior’s Path", href: "https://www.instagram.com/aspiritualwarriorspath" },
-  { name: "jessgoodvibesonly", href: "https://jessgoodvibesonly.vercel.app" }
+  { name: "EARTH SCHOOL Podcast", href: "https://www.youtube.com/@EarthSchoolThePodcast" },
+  { name: "A Spiritual Warrior’s Path to Re-Enlightening", href: "ADD_BOOK_LINK_HERE" }
+];
+
+const socialContacts = [
+  { label: "LinkedIn", text: "Jessica Simmonds on LinkedIn", href: "https://www.linkedin.com/in/jessica-simmonds-aspire4/" },
+  { label: "Instagram", text: "A Spiritual Warrior’s Path on Instagram", href: "https://www.instagram.com/aspiritualwarriorspath" },
+  { label: "Personal Site", text: "jessgoodvibesonly", href: "https://jessgoodvibesonly.vercel.app" },
+  { label: "Email", text: "jessgoodvibesonly@gmail.com", href: "mailto:jessgoodvibesonly@gmail.com", isMailto: true }
 ];
 
 const externalLinkProps = { target: "_blank", rel: "noopener noreferrer" };
@@ -142,32 +147,22 @@ export default function HomePage() {
         <ul className="contact-list">
           {connectedProjects.map((project) => (
             <li key={project.name}>
-              {project.href ? (
-                <a href={project.href} {...externalLinkProps}>{project.name}</a>
-              ) : (
-                <span>{project.name}</span>
-              )}
-              {project.href ? (
-                <a href={project.href} {...externalLinkProps}>Visit</a>
-              ) : (
-                <span className="podcast-placeholder">Podcast link coming soon</span>
-              )}
+              <span>{project.name}</span>
+              <a href={project.href} {...externalLinkProps}>{project.name}</a>
             </li>
           ))}
-          <li>
-            <span>Facebook Group</span>
-            <span className="podcast-placeholder">Facebook group link coming soon</span>
-          </li>
         </ul>
       </section>
 
       <section className="section content">
         <h2>Social / Contact</h2>
         <ul className="contact-list">
-          <li><span>Instagram</span><a href="https://www.instagram.com/aspiritualwarriorspath" {...externalLinkProps}>@aspiritualwarriorspath</a></li>
-          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/jessica-simmonds-aspire4/" {...externalLinkProps}>Jessica Simmonds</a></li>
-          <li><span>Personal Site</span><a href="https://jessgoodvibesonly.vercel.app" {...externalLinkProps}>jessgoodvibesonly.vercel.app</a></li>
-          <li><span>Email</span><a href="mailto:jessgoodvibesonly@gmail.com">jessgoodvibesonly@gmail.com</a></li>
+          {socialContacts.map((item) => (
+            <li key={item.text}>
+              <span>{item.label}</span>
+              <a href={item.href} {...(item.isMailto ? {} : externalLinkProps)}>{item.text}</a>
+            </li>
+          ))}
         </ul>
       </section>
 
