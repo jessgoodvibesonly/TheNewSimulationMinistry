@@ -55,7 +55,7 @@ export default function HomePage() {
         <h1>THE NEW SIMULATION MINISTRY</h1>
         <p className="lead">A real spiritual community for people exploring life as a temporary human experience.</p>
         <p className="support">Bringing Back the 80’s Movement</p>
-        <a href="https://jessgoodvibesonly.vercel.app" className="inline-link" {...externalLinkProps}>Visit JessGoodVibesOnly</a>
+        <a href="https://www.aspiritualwarriorspath.com" className="inline-link" {...externalLinkProps}>A Spiritual Warrior’s Path</a>
         <blockquote className="hero-quote">
           <p>“Can you see your own face right now?”</p>
           <cite>— Rev. Dr. Jessica Simmonds</cite>
@@ -158,7 +158,7 @@ export default function HomePage() {
         </ul>
       </section>
 
-      <footer className="footer">THE NEW SIMULATION MINISTRY · Peace, Light, and Levity</footer>
+      <footer className="footer">THE NEW SIMULATION MINISTRY · Peace, Light, and Levity · <a href="https://jessgoodvibesonly.vercel.app" className="inline-link" {...externalLinkProps}>JessGoodVibesOnly</a></footer>
     </main>
   );
 }
