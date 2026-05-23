@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const explorationTopics = [
   "Life as a Temporary Human Experience",
   "Awareness as the Gateway",
@@ -12,7 +14,15 @@ export default function HomePage() {
     <main className="page">
       <section className="hero section">
         <div className="hero-logo-wrap">
-          <img src="/the-new-simulation-ministry.png" alt="The New Simulation Ministry logo" className="hero-logo" />
+          <Image
+            src="/the-new-simulation-ministry.png"
+            alt="The New Simulation Ministry logo"
+            className="hero-logo"
+            width={1200}
+            height={1200}
+            priority
+            sizes="(max-width: 768px) 90vw, 360px"
+          />
         </div>
         <p className="kicker">Sacred · Modern · Minimal</p>
         <h1>THE NEW SIMULATION MINISTRY</h1>
