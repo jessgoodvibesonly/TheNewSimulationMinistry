@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ASPIREai | Human-led AI for modern companies",
+  title: "The New Simulation Ministry",
   description:
-    "ASPIREai helps people and technology work together to build better businesses with clarity, support, and confidence."
+    "A sacred, modern spiritual community exploring awareness, love, creativity, and conscious living."
 };
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
