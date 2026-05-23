@@ -123,14 +123,6 @@ export default function HomePage() {
           This ministry is for seekers, creators, spiritual thinkers, curious minds, and anyone who has ever felt that
           life is more than it appears to be.
         </p>
-        <a
-          href="https://forms.gle/X8zBMWuxZBCuB7L8A"
-          className="button join-button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Join the Conversation
-        </a>
       </section>
 
       <section className="section content">
