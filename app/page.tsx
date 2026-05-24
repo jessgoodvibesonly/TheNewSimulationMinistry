@@ -38,7 +38,7 @@ const connectedProjects = [
 const socialContacts = [
   { label: "LinkedIn", text: "Jessica Simmonds on LinkedIn", href: "https://www.linkedin.com/in/jessica-simmonds-aspire4/" },
   { label: "Instagram", text: "A Spiritual Warrior’s Path on Instagram", href: "https://www.instagram.com/aspiritualwarriorspath" },
-  { label: "Personal Site", text: "jessgoodvibesonly", href: "https://jessgoodvibesonly.vercel.app" },
+  { label: "Personal Site", text: "www.aspiritualwarriorspath.com", href: "https://www.aspiritualwarriorspath.com" },
   { label: "Email", text: "jessgoodvibesonly@gmail.com", href: "mailto:jessgoodvibesonly@gmail.com" }
 ];
 
@@ -105,7 +105,7 @@ export default function HomePage() {
           EARTH SCHOOL is part of the larger ministry vision—an expanding body of teachings, stories, and practices
           centered on the temporary human experience as a profound path of awareness.
         </p>
-        <a href="https://jessgoodvibesonly.vercel.app" className="inline-link" {...externalLinkProps}>Visit EARTH SCHOOL</a>
+        <a href="https://earth-school-five.vercel.app" className="inline-link" {...externalLinkProps}>Visit EARTH SCHOOL</a>
       </section>
 
       <section className="section content">
