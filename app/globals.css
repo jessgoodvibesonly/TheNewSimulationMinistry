@@ -180,6 +180,13 @@ h1 { margin: .65rem 0 .4rem; font-size: clamp(2rem, 6vw, 4.75rem); line-height: 
   border-radius: 18px;
   padding: 1rem;
   background: linear-gradient(175deg, rgba(255, 255, 255, 0.06), rgba(199, 168, 106, 0.04));
+  transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+}
+
+.ordination-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+  box-shadow: 0 0 24px rgba(199, 168, 106, 0.22);
 }
 
 .ordination-card h3 {
@@ -198,17 +205,43 @@ h1 { margin: .65rem 0 .4rem; font-size: clamp(2rem, 6vw, 4.75rem); line-height: 
   margin: 0;
 }
 
-.ordination-seal {
-  display: inline-flex;
+.ordination-heading-wrap {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-width: 98px;
-  padding: 0.3rem 0.65rem;
-  border: 1px solid var(--gold-soft);
-  border-radius: 999px;
+  text-align: center;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.ordination-gold-seal {
+  width: clamp(120px, 24vw, 180px);
+  height: auto;
+  filter: drop-shadow(0 0 14px rgba(199, 168, 106, 0.48));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+.thunderbird-line {
+  margin: 0.2rem 0 0 !important;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.94rem;
+}
+
+.gold-word {
   color: var(--gold);
-  letter-spacing: 0.09em;
-  font-size: 0.68rem;
+}
+
+.official-line {
+  color: rgba(255, 255, 255, 0.92) !important;
+  border-left: 2px solid var(--gold-soft);
+  padding-left: 0.8rem;
+}
+
+.ordination-button {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(120deg, #f6f1e5, #fff);
 }
 
 .price-note {
@@ -231,6 +264,14 @@ h1 { margin: .65rem 0 .4rem; font-size: clamp(2rem, 6vw, 4.75rem); line-height: 
 @media (min-width: 760px) {
   .ordination-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ordination-heading-wrap {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    gap: 1rem;
   }
 }
 
