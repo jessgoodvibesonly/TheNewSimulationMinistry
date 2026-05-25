@@ -170,7 +170,7 @@ export default function HomePage() {
 
       <section className="section content ordination-section" id="ordination">
         <div className="ordination-heading-wrap">
-          <img src="/TNSMgold.png" alt="The New Simulation Ministry official gold seal" className="ordination-gold-seal" />
+          <img src="/TNSMgoldblack.png" alt="The New Simulation Ministry official gold seal" className="ordination-gold-seal" />
           <div>
             <h2>Become Ordained</h2>
             <p className="thunderbird-line"><span className="gold-word">The Thunderbird</span> seal represents spiritual courage, higher awareness, and conscious transformation.</p>
