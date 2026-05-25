@@ -44,7 +44,7 @@ const ordinationOfferings = [
     ],
     price: "$22 USD",
     buttonText: "Request PDF Certificate",
-    buttonHref: "mailto:jessgoodvibesonly@gmail.com?subject=PDF%20Ordination%20Request"
+    buttonHref: "https://forms.gle/gVEeyXm9HKwBu3UH9"
   },
   {
     title: "Premium Printed Certificate",
@@ -59,7 +59,7 @@ const ordinationOfferings = [
     ],
     price: "$55 USD",
     buttonText: "Request Printed Certificate",
-    buttonHref: "mailto:jessgoodvibesonly@gmail.com?subject=Printed%20Ordination%20Request"
+    buttonHref: "https://forms.gle/VKV4RPfndEBberYB6"
   },
   {
     title: "Monthly Ministry Membership",
@@ -76,7 +76,7 @@ const ordinationOfferings = [
     ],
     price: "$11/month USD",
     buttonText: "Join Membership",
-    buttonHref: "mailto:jessgoodvibesonly@gmail.com?subject=Monthly%20Membership%20Request"
+    buttonHref: "https://forms.gle/vqPthoztdQiiVxCc6"
   }
 ];
 
@@ -202,7 +202,7 @@ export default function HomePage() {
                   <span>Price:</span> {offering.price}
                 </p>
               )}
-              <a href={offering.buttonHref} className="button ordination-button">
+              <a href={offering.buttonHref} className="button ordination-button" target="_blank" rel="noopener noreferrer">
                 {offering.buttonText}
               </a>
             </article>
