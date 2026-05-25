@@ -30,6 +30,50 @@ const gatheringItems = [
   "Spiritual exploration without rigid dogma"
 ];
 
+const ordinationOfferings = [
+  {
+    title: "Digital Ordination Certificate",
+    description: "Delivered by email as a personalized PDF.",
+    detailsTitle: "Includes:",
+    details: [
+      "Personalized name",
+      "Ministry seal",
+      "Thunderbird emblem",
+      "Founder signature",
+      "Official ceremonial ordination wording"
+    ],
+    priceLabel: "Suggested price:",
+    price: "$22–$44 USD"
+  },
+  {
+    title: "Premium Printed Certificate",
+    description: "A physical certificate mailed to the recipient.",
+    detailsTitle: "Style:",
+    details: [
+      "White certificate paper",
+      "Black typography",
+      "Soft gold seal or stamp",
+      "Thunderbird emblem",
+      "Elegant ceremonial layout"
+    ],
+    priceLabel: "Suggested price:",
+    price: "$55–$125 USD"
+  },
+  {
+    title: "Ministry Membership",
+    description: "A future community offering for people who want to join the ministry more deeply.",
+    detailsTitle: "May include:",
+    details: [
+      "Monthly virtual calls",
+      "EARTH SCHOOL reflections",
+      "Conscious living discussions",
+      "Guided spiritual teachings",
+      "Community connection",
+      "Digital welcome package"
+    ]
+  }
+];
+
 const connectedProjects = [
   { name: "EARTH SCHOOL Podcast", href: "https://www.youtube.com/@EarthSchoolThePodcast" },
   { name: "A Spiritual Warrior’s Path to Re-Enlightening", href: "https://www.amazon.com/Spiritual-Warriors-Path-Re-Enlightening-ebook/dp/B0BR66M6TJ" }
@@ -116,6 +160,52 @@ export default function HomePage() {
             <li key={item}>{item}</li>
           ))}
         </ul>
+      </section>
+
+      <section className="section content ordination-section" id="ordination">
+        <h2>BECOME ORDAINED</h2>
+        <p>
+          The New Simulation Ministry offers symbolic and ceremonial ordination for individuals who resonate with conscious living,
+          compassion, creativity, reflection, and spiritual exploration.
+        </p>
+        <p>
+          This is a modern spiritual and community ministry exploring awareness, consciousness, personal growth, creativity,
+          compassion, and the idea that life is a temporary human experience.
+        </p>
+
+        <div className="ordination-cards" role="list">
+          {ordinationOfferings.map((offering) => (
+            <article className="ordination-card" key={offering.title} role="listitem">
+              <div className="ordination-seal" aria-hidden="true">THUNDERBIRD</div>
+              <h3>{offering.title}</h3>
+              <p>{offering.description}</p>
+              <h4>{offering.detailsTitle}</h4>
+              <ul className="detail-list">
+                {offering.details.map((detail) => (
+                  <li key={detail}>{detail}</li>
+                ))}
+              </ul>
+              {offering.price && (
+                <p className="price-note">
+                  <span>{offering.priceLabel}</span> {offering.price}
+                </p>
+              )}
+            </article>
+          ))}
+        </div>
+
+        <p className="credibility-note">
+          <strong>Important note:</strong> Ordination through The New Simulation Ministry is offered as symbolic, ceremonial, and
+          spiritual/community recognition. Legal authority to perform weddings or official ceremonies may vary by location.
+          Members are responsible for checking their own local laws and requirements.
+        </p>
+
+        <a
+          href="mailto:jessgoodvibesonly@gmail.com?subject=Ordination%20Request%20-%20The%20New%20Simulation%20Ministry"
+          className="button"
+        >
+          Request Ordination
+        </a>
       </section>
 
       <section className="section content" id="join">
