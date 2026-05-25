@@ -38,12 +38,13 @@ const ordinationOfferings = [
     details: [
       "Personalized name",
       "Ministry seal",
-      "Thunderbird emblem",
+      "Official gold seal artwork",
       "Founder signature",
       "Official ceremonial ordination wording"
     ],
-    priceLabel: "Suggested price:",
-    price: "$22–$44 USD"
+    price: "$22 USD",
+    buttonText: "Request PDF Certificate",
+    buttonHref: "mailto:jessgoodvibesonly@gmail.com?subject=PDF%20Ordination%20Request"
   },
   {
     title: "Premium Printed Certificate",
@@ -53,24 +54,29 @@ const ordinationOfferings = [
       "White certificate paper",
       "Black typography",
       "Soft gold seal or stamp",
-      "Thunderbird emblem",
+      "Official gold seal artwork",
       "Elegant ceremonial layout"
     ],
-    priceLabel: "Suggested price:",
-    price: "$55–$125 USD"
+    price: "$55 USD",
+    buttonText: "Request Printed Certificate",
+    buttonHref: "mailto:jessgoodvibesonly@gmail.com?subject=Printed%20Ordination%20Request"
   },
   {
-    title: "Ministry Membership",
-    description: "A future community offering for people who want to join the ministry more deeply.",
-    detailsTitle: "May include:",
+    title: "Monthly Ministry Membership",
+    description: "Join The New Simulation Ministry community for ongoing reflection, connection, and conscious exploration.",
+    detailsTitle: "Membership Includes:",
     details: [
-      "Monthly virtual calls",
-      "EARTH SCHOOL reflections",
-      "Conscious living discussions",
+      "Monthly virtual ministry/community calls",
+      "EARTH SCHOOL reflections and discussions",
       "Guided spiritual teachings",
+      "Conscious living conversations",
       "Community connection",
+      "Early access to future ministry projects and experiences",
       "Digital welcome package"
-    ]
+    ],
+    price: "$11/month USD",
+    buttonText: "Join Membership",
+    buttonHref: "mailto:jessgoodvibesonly@gmail.com?subject=Monthly%20Membership%20Request"
   }
 ];
 
@@ -163,7 +169,13 @@ export default function HomePage() {
       </section>
 
       <section className="section content ordination-section" id="ordination">
-        <h2>BECOME ORDAINED</h2>
+        <div className="ordination-heading-wrap">
+          <img src="/TNSMgold.png" alt="The New Simulation Ministry official gold seal" className="ordination-gold-seal" />
+          <div>
+            <h2>Become Ordained</h2>
+            <p className="thunderbird-line"><span className="gold-word">The Thunderbird</span> seal represents spiritual courage, higher awareness, and conscious transformation.</p>
+          </div>
+        </div>
         <p>
           The New Simulation Ministry offers symbolic and ceremonial ordination for individuals who resonate with conscious living,
           compassion, creativity, reflection, and spiritual exploration.
@@ -172,11 +184,11 @@ export default function HomePage() {
           This is a modern spiritual and community ministry exploring awareness, consciousness, personal growth, creativity,
           compassion, and the idea that life is a temporary human experience.
         </p>
+        <p className="official-line">Official ceremonial recognition issued through The New Simulation Ministry.</p>
 
         <div className="ordination-cards" role="list">
           {ordinationOfferings.map((offering) => (
             <article className="ordination-card" key={offering.title} role="listitem">
-              <div className="ordination-seal" aria-hidden="true">THUNDERBIRD</div>
               <h3>{offering.title}</h3>
               <p>{offering.description}</p>
               <h4>{offering.detailsTitle}</h4>
@@ -187,9 +199,12 @@ export default function HomePage() {
               </ul>
               {offering.price && (
                 <p className="price-note">
-                  <span>{offering.priceLabel}</span> {offering.price}
+                  <span>Price:</span> {offering.price}
                 </p>
               )}
+              <a href={offering.buttonHref} className="button ordination-button">
+                {offering.buttonText}
+              </a>
             </article>
           ))}
         </div>
@@ -200,12 +215,6 @@ export default function HomePage() {
           Members are responsible for checking their own local laws and requirements.
         </p>
 
-        <a
-          href="mailto:jessgoodvibesonly@gmail.com?subject=Ordination%20Request%20-%20The%20New%20Simulation%20Ministry"
-          className="button"
-        >
-          Request Ordination
-        </a>
       </section>
 
       <section className="section content" id="join">
